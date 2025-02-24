@@ -4,8 +4,6 @@ import tailwindcss from "@tailwindcss/vite"
 export default defineNuxtConfig({
 	ssr: false,
 	app: {
-		// baseURL: '/portfolio',
-		cdnURL: 'https://jaswando.github.io/portfolio/',
 		head: {
 			title: 'Jason Bird',
 			meta: [
