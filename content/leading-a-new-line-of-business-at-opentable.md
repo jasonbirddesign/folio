@@ -49,5 +49,5 @@ This part of my process served as a double edge sword as it allowed me to confid
 ![image](https://placehold.co/450x200)
 	::
 ::
-::NextWork{title="A new way to secure reservations" path="/deposits"}
+::NextWork{title="A new way to secure reservations" path="/a-new-way-to-pay-and-secure-reservations"}
 ::
