@@ -21,14 +21,14 @@ const {
 		<container class="gap-28">
 			<div class="flex flex-col gap-2">
 				<h1 class="text-step-4">{{ title }}</h1>
-				<p class="text-light-grey text-step-0">{{ company }}</p>
+				<p class="text-step-0">{{ company }}</p>
 			</div>
 			<div class="flex flex-col gap-8">
 				<p class="text-step-1">{{ intro }}</p>
 				<hr class="border-grey/50">
 				<div class="grid grid-cols-3 gap-8">
 					<div class="flex flex-col gap-2">
-						<p class="text-blue font-bold text-step--1">MY ROLE</p>
+						<p class="text-dark-grey font-bold text-step--1">MY ROLE</p>
 						<p
 							v-for="r in role"
 							:key="r"
@@ -38,7 +38,7 @@ const {
 						</p>
 					</div>
 					<div class="flex flex-col gap-2">
-						<p class="text-blue font-bold text-step--1">THE TEAM</p>
+						<p class="text-dark-grey font-bold text-step--1">THE TEAM</p>
 						<p
 							v-for="t in team"
 							:key="t"

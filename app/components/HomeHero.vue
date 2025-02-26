@@ -1,55 +1,77 @@
 <template>
-	<div class="flex flex-col gap-24 pb-12">
-		<div class="grid grid-cols-2 gap-16">
-			<div class="text-step-3 font-bold">
-				<h1>Designing digital experiences to solve human problems</h1>
-			</div>
-			<div class="flex flex-col gap-8 text-step-0">
-				<p>
-					<span class="font-bold">Hello. I'm Jason</span> - Lead Product Designer
-					<NuxtLink
-						to="https://www.opentable.com/"
-						target="_blank"
-						class="text-red"
-					>
-						@OpenTable
-					</NuxtLink> previously
-					<NuxtLink
-						to="https://clearleft.com/"
-						target="_blank"
-						class="text-red"
-					>
-						@Clearleft
-					</NuxtLink>
-				</p>
-				<p>Currently leading design for OpenTables Commerce line of business. I work with multi discipline teams to solve problems that bring business value while remaining an advocate for the the user.</p>
-				<p>I'm a strategic thinker, problem solver and systems tinkerer.</p>
-			</div>
+	<div class="pt-56 pb-16">
+		<p class="mb-4">
+			Lead Product Designer
+			<NuxtLink
+				to="https://www.opentable.com/"
+				target="_blank"
+			>
+				@OpenTable
+			</NuxtLink> previously
+			<NuxtLink
+				to="https://clearleft.com/"
+				target="_blank"
+			>
+				@Clearleft
+			</NuxtLink>
+		</p>
+		<h1 class="text-step-5 font-bold leading-tight mb-42">Designing digital experiences that drive business value.</h1>
+		<p class="text-step--1 text-center mb-4">Who i’ve worked with</p>
+		<div class="hidden lg:flex flex-wrap gap-8 py-8 justify-between items-center">
+			<img
+				src="~/assets/img/opentable.png"
+				alt="OpenTable"
+				width="199"
+			/>
+			<img
+				src="~/assets/img/virginatlantic.png"
+				alt="Virgin Atlantic"
+				width="199"
+			/>
+			<img
+				src="~/assets/img/jpmorgan.png"
+				alt="J.P. Morgan"
+				width="150"
+			/>
+			<img
+				src="~/assets/img/lloyds.png"
+				alt="Lloyds"
+				width="121"
+			/>
+			<img
+				src="~/assets/img/clearleft.png"
+				alt="Clearleft"
+				width="121"
+			/>
 		</div>
-		<div class="flex flex-col gap-8">
-			<p class="text-step-0 text-center">A few companies I've worked with</p>
-			<div class="flex flex-wrap gap-8 justify-between items-center">
+		<Vue3Marquee>
+			<div class="lg:hidden flex gap-8 py-8 items-center mr-8">
 				<img
 					src="~/assets/img/opentable.png"
 					alt="OpenTable"
+					width="199"
 				/>
 				<img
 					src="~/assets/img/virginatlantic.png"
 					alt="Virgin Atlantic"
-				/>
-				<img
-					src="~/assets/img/clearleft.png"
-					alt="Clearleft"
+					width="199"
 				/>
 				<img
 					src="~/assets/img/jpmorgan.png"
 					alt="J.P. Morgan"
+					width="150"
 				/>
 				<img
 					src="~/assets/img/lloyds.png"
 					alt="Lloyds"
+					width="121"
+				/>
+				<img
+					src="~/assets/img/clearleft.png"
+					alt="Clearleft"
+					width="121"
 				/>
 			</div>
-		</div>
+		</Vue3Marquee>
 	</div>
 </template>

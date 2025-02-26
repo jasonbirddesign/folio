@@ -17,6 +17,9 @@ dependencies:
   tailwindcss:
     specifier: ^4.0.6
     version: 4.0.7
+  vue3-marquee:
+    specifier: ^4.2.2
+    version: 4.2.2(vue@3.5.13)
 
 packages:
 
@@ -7372,6 +7375,15 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.7.3)
+    dev: false
+
+  /vue3-marquee@4.2.2(vue@3.5.13):
+    resolution: {integrity: sha512-FeFvGUVInKfFilXFcnl8sDRBJBZCZSNLlQDquJErB9db6W2xICRVqbRV/jtdzsEP0rftarLQhx9MeEAU0+TPuQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2
+    dependencies:
       vue: 3.5.13(typescript@5.7.3)
     dev: false
 

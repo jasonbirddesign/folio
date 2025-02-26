@@ -1,8 +1,8 @@
 <template>
-	<Container class="gap-10">
-		<div class="flex justify-between pt-12 pb-28 font-bold">
-			<p class="text-step-1">Jason Bird</p>
-			<div class="flex gap-6 text-step-0">
+	<Container>
+		<div class="flex justify-between py-8 text-dark-grey">
+			<p class="text-step-1 font-bold">Jason Bird</p>
+			<div class="flex gap-12 text-step-0">
 				<NuxtLink to="/">Work</NuxtLink>
 				<NuxtLink to="/about">About</NuxtLink>
 			</div>

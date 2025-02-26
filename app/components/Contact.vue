@@ -1,23 +1,17 @@
 <template>
-	<div class="border-t border-dark-grey pt-3 pb-10 flex items-center gap-6 text-red text-step-0">
-		<div class="flex items-center gap-2">
-			<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M5.33203 6.66667C4.60174 6.66667 3.9987 7.26971 3.9987 8V24C3.9987 24.7303 4.60174 25.3333 5.33203 25.3333H26.6654C27.3957 25.3333 27.9987 24.7303 27.9987 24V8C27.9987 7.26971 27.3957 6.66667 26.6654 6.66667H5.33203ZM1.33203 8C1.33203 5.79695 3.12898 4 5.33203 4H26.6654C28.8684 4 30.6654 5.79695 30.6654 8V24C30.6654 26.203 28.8684 28 26.6654 28H5.33203C3.12898 28 1.33203 26.203 1.33203 24V8Z" fill="#161D30"/>
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M1.57708 7.23534C1.99936 6.63207 2.83074 6.48536 3.434 6.90764L16.0027 15.7057L28.5714 6.90764C29.1747 6.48536 30.0061 6.63207 30.4284 7.23534C30.8506 7.8386 30.7039 8.66998 30.1007 9.09226L16.7673 18.4256C16.3082 18.747 15.6972 18.747 15.2381 18.4256L1.90477 9.09226C1.3015 8.66998 1.15479 7.8386 1.57708 7.23534Z" fill="#161D30"/>
-			</svg>
-			<p>jason.bird55@gmail.com</p>
-		</div>
-		<div class="flex items-center gap-2">
-			<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M29.7 0H3.3C1.485 0 0 1.485 0 3.3V29.7C0 31.515 1.485 33 3.3 33H29.7C31.515 33 33 31.515 33 29.7V3.3C33 1.485 31.515 0 29.7 0ZM9.9 28.05H4.95V13.2H9.9V28.05ZM7.425 10.395C5.775 10.395 4.455 9.075 4.455 7.425C4.455 5.775 5.775 4.455 7.425 4.455C9.075 4.455 10.395 5.775 10.395 7.425C10.395 9.075 9.075 10.395 7.425 10.395ZM28.05 28.05H23.1V19.305C23.1 17.9851 21.945 16.83 20.625 16.83C19.305 16.83 18.15 17.9851 18.15 19.305V28.05H13.2V13.2H18.15V15.18C18.975 13.86 20.79 12.87 22.275 12.87C25.41 12.87 28.05 15.51 28.05 18.645V28.05Z" fill="#161D30"/>
-			</svg>
+	<div class="border-t-2 border-grey/50 pt-18 pb-27">
+		<h2 class="text-dark-grey text-step-3 font-bold mb-10">Let’s work together</h2>
+		<p class="mb-12">Get in touch to discuss a collaborative partnership<br> and achieve the best outcomes together.</p>
+		<div class="flex items-center gap-8">
 			<NuxtLink
 				to="https://www.linkedin.com/in/jbird55/"
 				target="_blank"
-				class="underline"
 			>
-				jbird55
+				<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M29.7 0H3.3C1.485 0 0 1.485 0 3.3V29.7C0 31.515 1.485 33 3.3 33H29.7C31.515 33 33 31.515 33 29.7V3.3C33 1.485 31.515 0 29.7 0ZM9.9 28.05H4.95V13.2H9.9V28.05ZM7.425 10.395C5.775 10.395 4.455 9.075 4.455 7.425C4.455 5.775 5.775 4.455 7.425 4.455C9.075 4.455 10.395 5.775 10.395 7.425C10.395 9.075 9.075 10.395 7.425 10.395ZM28.05 28.05H23.1V19.305C23.1 17.9851 21.945 16.83 20.625 16.83C19.305 16.83 18.15 17.9851 18.15 19.305V28.05H13.2V13.2H18.15V15.18C18.975 13.86 20.79 12.87 22.275 12.87C25.41 12.87 28.05 15.51 28.05 18.645V28.05Z" fill="#333333"/>
+				</svg>
 			</NuxtLink>
+			<a href="mailto:jason.bird55@gmail.com">jason.bird55@gmail.com</a>
 		</div>
 	</div>
 </template>
