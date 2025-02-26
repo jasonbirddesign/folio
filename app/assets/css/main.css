@@ -36,24 +36,3 @@ h1, a {
 		@apply flex flex-col gap-6
 	}
 }
-
-.about {
-	@apply gap-16 pb-16;
-	h1 {
-		@apply text-step-4
-	}
-	p {
-		@apply text-step-2
-	}
-	h6 {
-		@apply text-step-2 font-bold text-dark-grey
-	}
-	.links {
-		p {
-			@apply leading-none
-		}
-		a {
-			@apply text-step-0
-		}
-	}
-}

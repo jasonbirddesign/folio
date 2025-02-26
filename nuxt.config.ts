@@ -10,6 +10,13 @@ export default defineNuxtConfig({
 					name: 'description',
 					content: 'Designing digital experiences to solve human problems'
 				}
+			],
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: '/favicon.ico'
+				}
 			]
 		}
 	},
