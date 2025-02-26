@@ -1,16 +1,16 @@
-::container{class="gap-10"}
+::container
 	::home-hero
 	::
-	::work-card{company="OpenTable" title="Leading a new line of business at OpenTable" image="https://placehold.co/450x200" path="/leading-a-new-line-of-business-at-opentable"}
-	::
-	::work-card{company="OpenTable" title="A new way to pay & secure reservations" image="https://placehold.co/450x200" path="/a-new-way-to-pay-and-secure-reservations"}
-	::
-	::work-card{company="Clearleft x JP Morgan" title="Designing a central intelligence platform" image="https://placehold.co/450x200" path="/designing-a-central-intelligence-platform"}
-	::
-	::div{class="grid grid-cols-2 gap-8"}
-		::work-card{title="Optimisation with A/B enhancements" image="https://placehold.co/450x200" path="/optimisation-with-a-b-enhancements" small}
+	::div{class="flex flex-col gap-8 pb-16"}
+		::work-card{company="OpenTable" title="Reducing no shows with a new way secure reservations" image="/_nuxt/assets/img/deposits.png" path="/reducing-no-shows-with-a-new-way-secure-reservations"}
 		::
-		::work-card{title="Systemising design for Virgin Connect" image="https://placehold.co/450x200" path="/systemising-design-for-virgin-connect" small}
+		::work-card{company="OpenTable" title="Increasing discovery bookings" image="/_nuxt/assets/img/discovery.png" path="/increasing-discovery-bookings"}
+		::
+		::work-card{company="JP Morgan x Clearleft" title="Desigining a central intelligence platform" image="/_nuxt/assets/img/Internal tool.png" path="/designing-a-central-intelligence-platform"}
+		::
+		::work-card{company="Virgin Connect x Flybe" title="Systemising design for Virgin Connect" image="/_nuxt/assets/img/Virgin Connect.png" path="/systemising-design-for-virgin-connect"}
+		::
+		::work-card{company="Virgin Connect x Flybe" title="A/B test enhancements" image="/_nuxt/assets/img/Virgin Atlantic.png" path="/ab-test-enhancements"}
 		::
 	::
 	::contact

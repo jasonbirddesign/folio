@@ -9,27 +9,22 @@
 	--text-step-3: clamp(1.944rem, 1.8716rem + 0.3618vw, 2.1973rem);
 	--text-step-4: clamp(2.3328rem, 2.2146rem + 0.5911vw, 2.7466rem);
 	--text-step-5: clamp(2.7994rem, 2.6183rem + 0.9055vw, 3.4332rem);
-	--color-red: #C03143;
-	--color-green: #17261F;
-	--color-blue: #161D30;
-	--color-light-grey: #73808D;
 	--color-grey: #5D6375;
 	--color-dark-grey: #333333;
 }
 
-html {
-	background-color: #F5F5F3;
-	@apply text-grey
+body {
+	@apply text-step-0 text-grey
 }
 
-h1 {
-	@apply text-red
+h1, a {
+	@apply text-dark-grey
 }
 
 .work {
 	@apply py-16 gap-16;
 	h2 {
-		@apply text-step-3 font-bold text-green leading-tight
+		@apply text-step-3 font-bold text-dark-grey leading-tight
 	}
 	p {
 		@apply text-step-1 flex flex-col w-full
@@ -52,9 +47,6 @@ h1 {
 	}
 	h6 {
 		@apply text-step-2 font-bold text-dark-grey
-	}
-	a {
-		@apply text-red
 	}
 	.links {
 		p {

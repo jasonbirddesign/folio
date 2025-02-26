@@ -3,40 +3,26 @@ const {
 	company,
 	title,
 	image,
-	path,
-	small = false
+	path
 } = defineProps<{
 	company?: string
 	title: string
 	image: string
 	path: string
-	small?: boolean
 }>()
 </script>
 
 <template>
 	<NuxtLink
 		:to="path"
-		class="pt-4 border-t border-dark-grey"
+		class="leading-tight"
 	>
-		<p
-			v-if="company"
-			class="text-step--1"
-		>
-			{{ company }}
-		</p>
-		<h2
-			:class="[{
-				'text-step-1': small,
-				'text-step-3': !small
-			}, 'text-dark-grey mb-4']"
-		>
-			{{ title }}
-		</h2>
+		<p class="text-grey text-step--1 mb-2">{{ company }}</p>
+		<h2 class="text-dark-grey text-step-3 mb-4">{{ title }}</h2>
 		<img
 			:src="image"
 			:alt="title"
-			class="w-full"
+			class="w-full rounded-3xl"
 		/>
 	</NuxtLink>
 </template>

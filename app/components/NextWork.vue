@@ -9,7 +9,7 @@ const {
 </script>
 
 <template>
-	<div class="bg-red text-white py-12">
+	<div class="bg-dark-grey text-white py-12">
 		<NuxtLink :to="path">
 			<Container class="gap-2">
 				<p class="font-bold text-step-0">NEXT CASE STUDY</p>
