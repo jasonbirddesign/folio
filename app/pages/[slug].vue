@@ -12,7 +12,17 @@ const html = computed(() => {
 	return documentToHtmlString(work.value.body, {
 		renderNode: {
 			[BLOCKS.EMBEDDED_ASSET]: (node) => {
-				return `<img src="${node.data.target.fields.file.url}" alt="${node.data.target.fields.title}" />`
+				const tags = node.data.target.metadata?.tags
+				const narrow = tags?.find((tag: any) => tag.sys.id === 'narrow')
+				const lightGreyBackground = tags?.find((tag: any) => tag.sys.id === 'lightGreyBackground')
+				let classNames = "w-full"
+				if (narrow) classNames += " max-w-[848px] mx-auto"
+				if (lightGreyBackground) classNames += " bg-light-grey rounded-3xl p-4"
+				return `<img
+					src="${node.data.target.fields.file.url}"
+					alt="${node.data.target.fields.title}"
+					class="${classNames}"
+				/>`
 			}
 		}
 	})
@@ -26,6 +36,7 @@ const html = computed(() => {
 			<div
 				v-if="html"
 				v-html="html"
+				class="prose"
 			></div>
 		</div>
 		<WorkNext
