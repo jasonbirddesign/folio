@@ -1,6 +1,0 @@
-::container
-	::about
-	::
-	::contact
-	::
-::

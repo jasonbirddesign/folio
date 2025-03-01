@@ -47,6 +47,10 @@ a:hover {
 	@apply underline
 }
 
+.container {
+	@apply max-w-[1068px] mx-auto px-4 flex flex-col
+}
+
 .work {
 	@apply py-16 gap-16;
 	h2 {

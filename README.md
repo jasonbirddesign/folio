@@ -1,6 +1,6 @@
 # Jason Bird
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+Designing digital experiences that drive business value.
 
 ## Setup
 
