@@ -26,6 +26,7 @@
 	--text-step-3: clamp(1.944rem, 1.8716rem + 0.3618vw, 2.1973rem);
 	--text-step-4: clamp(2.3328rem, 2.2146rem + 0.5911vw, 2.7466rem);
 	--text-step-5: clamp(2.7994rem, 2.6183rem + 0.9055vw, 3.4332rem);
+	--color-light-grey: #F9F9F9;
 	--color-grey: #5D6375;
 	--color-dark-grey: #333333;
 	--color-blue: #2E90FA;
@@ -51,18 +52,18 @@ a:hover {
 	@apply max-w-[1100px] mx-auto px-4 flex flex-col
 }
 
-.work {
-	@apply py-16 gap-16;
+.prose {
+	@apply flex flex-col gap-4;
+	p, h2, h3, h4, h5, h6 {
+		@apply max-w-[848px] mx-auto w-full
+	}
+	h2, h3, h4, h5, h6 {
+		@apply font-bold
+	}
 	h2 {
-		@apply text-step-3 font-bold text-dark-grey leading-tight
+		@apply text-dark-grey text-step-3
 	}
-	p {
-		@apply text-step-1 flex flex-col w-full
-	}
-	img {
-		@apply self-center
-	}
-	> div {
-		@apply flex flex-col gap-6
+	h3 {
+		@apply text-step--1
 	}
 }
