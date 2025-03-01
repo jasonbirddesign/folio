@@ -1,0 +1,1 @@
+import{l as t,f as n,k as o,U as s}from"./CU6HreC3.js";const a={},c={class:"max-w-[1068px] mx-auto px-4 flex flex-col"};function _(e,r){return o(),n("div",c,[s(e.$slots,"default")])}const f=Object.assign(t(a,[["render",_]]),{__name:"Container"});export{f as default};
