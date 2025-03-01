@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="pt-22.5 pb-16">
+	<div>
 		<div class="max-w-[848px] mx-auto mb-10">
 			<h1 class="text-step-4 font-bold leading-tight mb-8">{{ work.title }}</h1>
 			<p class="text-step-1 mb-16">{{ work.introduction }}</p>

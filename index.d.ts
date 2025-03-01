@@ -1,3 +1,5 @@
+import { EntryFieldTypes } from 'contentful'
+
 export {}
 
 declare global {
@@ -12,7 +14,9 @@ declare global {
 		outcome: string[]
 		contribution: string[]
 		press: Link[]
-		heroImage: Object
-		body: Object
+		heroImage: EntryFieldTypes.Image
+		body: EntryFieldTypes.Document
+		nextWorkTitle: string
+		nextWorkSlug: string
 	}
 }
