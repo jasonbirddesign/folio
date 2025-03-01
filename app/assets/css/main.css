@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+	font-family: Circular;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('~/assets/font/CircularStd-Book.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Circular;
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('~/assets/font/CircularStd-Bold.woff2') format('woff2');
+}
+
 @theme {
+	--font-display: 'Circular', 'sans-serif';
 	--text-step--2: clamp(0.72rem, 0.7988rem + -0.0875vw, 0.7813rem);
 	--text-step--1: clamp(0.9rem, 0.9482rem + -0.0536vw, 0.9375rem);
 	--text-step-0: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
@@ -11,10 +28,15 @@
 	--text-step-5: clamp(2.7994rem, 2.6183rem + 0.9055vw, 3.4332rem);
 	--color-grey: #5D6375;
 	--color-dark-grey: #333333;
+	--color-blue: #2E90FA;
+	--color-dark-blue: #1570EF;
+	--color-green: #12B76A;
+	--color-dark-green: #039855;
+	--shadow-floating-cursor: 4px 4px 10px 0px;
 }
 
 body {
-	@apply text-step-0 text-grey
+	@apply text-step-0 text-grey font-display
 }
 
 h1, a {

@@ -1,5 +1,15 @@
 <template>
-	<div class="pt-56 pb-16">
+	<div class="relative pt-56 pb-16">
+		<FloatingCursor
+			text="Hi, i'm Jason"
+			colour="blue"
+			class="floating-cursor-1 left-0 top-36"
+		/>
+		<FloatingCursor
+			text="Your team"
+			colour="green"
+			class="floating-cursor-2 right-0 bottom-80"
+		/>
 		<p class="mb-4">
 			Lead Product Designer
 			<NuxtLink
