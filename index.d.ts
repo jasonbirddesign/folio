@@ -11,6 +11,7 @@ declare global {
 		title: string
 		introduction: string
 		myRole: string
+		team: string[]
 		outcome: string[]
 		contribution: string[]
 		press: Link[]
