@@ -9,4 +9,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 		content_type: 'work'
 	})
 	nuxtApp.provide('work', work)
+	const openedImage = ref<OpenedImage | null>(null)
+	nuxtApp.provide('openImage', (payload: string) => {
+		openedImage.value = JSON.parse(decodeURIComponent(payload))
+	})
+	nuxtApp.provide('openedImage', openedImage)
 })
