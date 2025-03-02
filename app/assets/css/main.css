@@ -19,14 +19,14 @@
 @theme {
 	--breakpoint-xs: 25rem;
 	--font-display: 'Circular', 'sans-serif';
-	--text-step--2: clamp(0.72rem, 0.7988rem + -0.0875vw, 0.7813rem);
-	--text-step--1: clamp(0.9rem, 0.9482rem + -0.0536vw, 0.9375rem);
+	--text-step--2: clamp(0.676rem, 0.8113rem + -0.1503vw, 0.7813rem);
+	--text-step--1: clamp(0.8721rem, 0.9562rem + -0.0934vw, 0.9375rem);
 	--text-step-0: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-	--text-step-1: clamp(1.35rem, 1.3339rem + 0.0804vw, 1.4063rem);
-	--text-step-2: clamp(1.62rem, 1.5806rem + 0.1969vw, 1.7578rem);
-	--text-step-3: clamp(1.944rem, 1.8716rem + 0.3618vw, 2.1973rem);
-	--text-step-4: clamp(2.3328rem, 2.2146rem + 0.5911vw, 2.7466rem);
-	--text-step-5: clamp(2.7994rem, 2.6183rem + 0.9055vw, 3.4332rem);
+	--text-step-1: clamp(1.35rem, 1.3211rem + 0.1446vw, 1.4513rem);
+	--text-step-2: clamp(1.62rem, 1.548rem + 0.3602vw, 1.8721rem);
+	--text-step-3: clamp(1.944rem, 1.8094rem + 0.6729vw, 2.415rem);
+	--text-step-4: clamp(2.3328rem, 2.1092rem + 1.118vw, 3.1154rem);
+	--text-step-5: clamp(2.7994rem, 2.4509rem + 1.7421vw, 4.0188rem);
 	--color-light-grey: #F9F9F9;
 	--color-grey: #5D6375;
 	--color-dark-grey: #333333;
