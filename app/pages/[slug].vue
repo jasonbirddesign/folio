@@ -15,18 +15,25 @@ const html = computed(() => {
 				const tags = node.data.target.metadata?.tags
 				const narrow = tags?.find((tag: any) => tag.sys.id === 'narrow')
 				const lightGreyBackground = tags?.find((tag: any) => tag.sys.id === 'lightGreyBackground')
-				let classNames = "w-full"
+				let classNames = "w-full cursor-pointer"
 				if (narrow) classNames += " max-w-[848px] mx-auto"
 				if (lightGreyBackground) classNames += " bg-light-grey rounded-3xl p-4"
-				return `<img
-					src="${node.data.target.fields.file.url}"
-					alt="${node.data.target.fields.title}"
+				return `<button
 					class="${classNames}"
-				/>`
+				>
+					<img
+						src="${node.data.target.fields.file.url}"
+						alt="${node.data.target.fields.title}"
+						class="w-full"
+					/>
+				</button>`
 			}
 		}
 	})
 })
+const openImageModal = (url: string) => {
+	console.log(url)
+}
 </script>
 
 <template>

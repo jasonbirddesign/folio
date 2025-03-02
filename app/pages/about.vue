@@ -37,7 +37,7 @@ const links = [
 <template>
 	<div class="container">
 		<div class="pt-30 pb-23">
-			<h1 class="text-step-5 font-bold mb-16">About</h1>
+			<h1 class="text-step-4 font-bold mb-16">About</h1>
 			<div class="mb-16 flex flex-col gap-6 max-w-[628px]">
 				<p>10+ years designing Products and services based in Brighton, UK</p>
 				<p>Leading design bringing multi discipline teams together to turn ideas in to consumer value. I'm a strategic thinker, problem solver, systems tinkerer with a core focus on empowering design and the</p>
