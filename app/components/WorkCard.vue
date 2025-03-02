@@ -13,16 +13,18 @@ const {
 </script>
 
 <template>
-	<NuxtLink
-		:to="path"
-		class="leading-tight !no-underline"
-	>
-		<p class="text-grey text-step--1 mb-2">{{ company }}</p>
-		<h2 class="text-dark-grey text-step-1 md:text-step-3 mb-4">{{ title }}</h2>
-		<img
-			:src="image"
-			:alt="title"
-			class="w-full rounded-lg xs:rounded-2xl md:rounded-3xl"
-		/>
-	</NuxtLink>
+	<Fade>
+		<NuxtLink
+			:to="path"
+			class="leading-tight !no-underline"
+		>
+			<p class="text-grey text-step--1 mb-2">{{ company }}</p>
+			<h2 class="text-dark-grey text-step-1 md:text-step-3 mb-4">{{ title }}</h2>
+			<img
+				:src="image"
+				:alt="title"
+				class="w-full rounded-lg xs:rounded-2xl md:rounded-3xl"
+			/>
+		</NuxtLink>
+	</Fade>
 </template>

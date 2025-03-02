@@ -49,21 +49,6 @@ a:hover {
 	@apply underline
 }
 
-.active {
-	opacity: 0;
-	animation: fade 1s ease-out forwards;
-	animation-delay: 0.3s;
-}
-
-@keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 .container {
 	@apply max-w-[1100px] mx-auto px-4 flex flex-col
 }
