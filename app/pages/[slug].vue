@@ -2,7 +2,7 @@
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 const route = useRoute()
-const { $work } = useNuxtApp()
+const { $work, $openedImage } = useNuxtApp()
 const work = computed<Work>(() => {
 	return $work?.items?.find(item => {
 		return item.fields.slug === route.params.slug
@@ -13,13 +13,19 @@ const html = computed(() => {
 		renderNode: {
 			[BLOCKS.EMBEDDED_ASSET]: (node) => {
 				const tags = node.data.target.metadata?.tags
-				const narrow = tags?.find((tag: any) => tag.sys.id === 'narrow')
-				const lightGreyBackground = tags?.find((tag: any) => tag.sys.id === 'lightGreyBackground')
-				let classNames = "w-full cursor-pointer"
+				const narrow = !!tags?.find((tag: any) => tag.sys.id === 'narrow')
+				const lightGreyBackground = !!tags?.find((tag: any) => tag.sys.id === 'lightGreyBackground')
+				let classNames = "w-full"
 				if (narrow) classNames += " max-w-[848px] mx-auto"
 				if (lightGreyBackground) classNames += " bg-light-grey rounded-3xl p-4"
+				const payload = encodeURIComponent(JSON.stringify({
+					src: node.data.target.fields.file.url,
+					alt: node.data.target.fields.title,
+					lightGreyBackground
+				}))
 				return `<button
 					class="${classNames}"
+					onclick="useNuxtApp().$openImage('${payload}')"
 				>
 					<img
 						src="${node.data.target.fields.file.url}"
@@ -31,9 +37,6 @@ const html = computed(() => {
 		}
 	})
 })
-const openImageModal = (url: string) => {
-	console.log(url)
-}
 </script>
 
 <template>
@@ -52,4 +55,21 @@ const openImageModal = (url: string) => {
 			:slug="work.nextWorkSlug"
 		/>
 	</template>
+	<div
+		v-if="$openedImage"
+		class="fixed inset-0 bg-dark-grey/50 overflow-y-auto flex flex-col"
+	>
+		<button
+			@click="$openedImage = null"
+			class="grow"
+		>
+			<img
+				:src="$openedImage.src"
+				:alt="$openedImage.alt"
+				:class="[{
+					'bg-light-grey rounded-3xl p-4': $openedImage.lightGreyBackground
+				}, 'w-full']"
+			/>
+		</button>
+	</div>
 </template>

@@ -20,4 +20,16 @@ declare global {
 		nextWorkTitle: string
 		nextWorkSlug: string
 	}
+	interface OpenedImage {
+		src: string
+		alt: string
+		lightGreyBackground: boolean
+	}
+}
+
+declare module '#app' {
+	interface NuxtApp {
+		$openedImage: OpenedImage | null
+		$openImage: Function
+	}
 }

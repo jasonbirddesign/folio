@@ -1,7 +1,15 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
 	work: Work
 }>()
+const { $openImage } = useNuxtApp()
+const openImage = () => {
+	const payload = encodeURIComponent(JSON.stringify({
+		src: props.work.heroImage.fields.file.url,
+		alt: props.work.title
+	}))
+	$openImage(payload)
+}
 </script>
 
 <template>
@@ -50,10 +58,12 @@ defineProps<{
 				</div>
 			</div>
 		</div>
-		<img
-			:src="work.heroImage.fields.file.url"
-			:alt="work.title"
-			class="w-full"
-		/>
+		<button @click="openImage">
+			<img
+				:src="work.heroImage.fields.file.url"
+				:alt="work.title"
+				class="w-full"
+			/>
+		</button>
 	</div>
 </template>
