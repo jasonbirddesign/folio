@@ -23,6 +23,9 @@ export default defineNuxtConfig({
 	},
 	devtools: { enabled: false },
 	css: ['~/assets/css/main.css'],
+	modules: [
+		'@vueuse/nuxt'
+	],
 	vite: {
 		plugins: [
 			tailwindcss()

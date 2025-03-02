@@ -1,25 +1,29 @@
 <template>
 	<div class="relative pt-33 md:pt-56 pb-16">
-		<FloatingCursor
-			text="Hi, i'm Jason"
-			colour="blue"
-			class="floating-cursor-1 left-0 top-12 md:top-36"
-		/>
-		<p class="mb-4">
-			Lead Product Designer
-			<NuxtLink
-				to="https://www.opentable.com/"
-				target="_blank"
-			>
-				@OpenTable
-			</NuxtLink> previously
-			<NuxtLink
-				to="https://clearleft.com/"
-				target="_blank"
-			>
-				@Clearleft
-			</NuxtLink>
-		</p>
+		<Fade>
+			<FloatingCursor
+				text="Hi, i'm Jason"
+				colour="blue"
+				class="floating-cursor-1 left-0 top-12 md:top-36"
+			/>
+		</Fade>
+		<Fade>
+			<p class="mb-4">
+				Lead Product Designer
+				<NuxtLink
+					to="https://www.opentable.com/"
+					target="_blank"
+				>
+					@OpenTable
+				</NuxtLink> previously
+				<NuxtLink
+					to="https://clearleft.com/"
+					target="_blank"
+				>
+					@Clearleft
+				</NuxtLink>
+			</p>
+		</Fade>
 		<h1 class="text-step-5 font-bold leading-tight mb-31 md:mb-42">Designing digital experiences that drive business value.</h1>
 		<div class="relative">
 			<FloatingCursor

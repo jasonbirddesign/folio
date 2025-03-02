@@ -22,7 +22,7 @@ const {
 		<img
 			:src="image"
 			:alt="title"
-			class="w-full rounded-3xl"
+			class="w-full rounded-lg xs:rounded-2xl md:rounded-3xl"
 		/>
 	</NuxtLink>
 </template>
