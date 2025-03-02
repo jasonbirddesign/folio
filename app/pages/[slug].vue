@@ -55,21 +55,36 @@ const html = computed(() => {
 			:slug="work.nextWorkSlug"
 		/>
 	</template>
-	<div
-		v-if="$openedImage"
-		class="fixed inset-0 bg-dark-grey/50 overflow-y-auto flex flex-col"
-	>
-		<button
-			@click="$openedImage = null"
-			class="grow"
+	<Transition name="fade">
+		<div
+			v-if="$openedImage"
+			class="fixed inset-0 bg-dark-grey/50 overflow-y-auto flex flex-col"
 		>
-			<img
-				:src="$openedImage.src"
-				:alt="$openedImage.alt"
-				:class="[{
-					'bg-light-grey rounded-3xl p-4': $openedImage.lightGreyBackground
-				}, 'w-full']"
-			/>
-		</button>
-	</div>
+			<button
+				@click="$openedImage = null"
+				class="grow"
+			>
+				<img
+					:src="$openedImage.src"
+					:alt="$openedImage.alt"
+					:class="[{
+						'bg-light-grey rounded-3xl p-4': $openedImage.lightGreyBackground
+					}, 'w-full']"
+				/>
+			</button>
+		</div>
+	</Transition>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+	transform: scale(0.9);
+}
+</style>

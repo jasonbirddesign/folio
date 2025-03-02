@@ -22,7 +22,7 @@ watch(targetIsVisible, isVisible => {
 	</div>
 </template>
 
-<style>
+<style scoped>
 .active {
 	opacity: 0;
 	animation: fade 1s ease-out forwards;
