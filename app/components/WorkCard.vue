@@ -18,7 +18,7 @@ const {
 		class="leading-tight !no-underline"
 	>
 		<p class="text-grey text-step--1 mb-2">{{ company }}</p>
-		<h2 class="text-dark-grey text-step-3 mb-4">{{ title }}</h2>
+		<h2 class="text-dark-grey text-step-1 md:text-step-3 mb-4">{{ title }}</h2>
 		<img
 			:src="image"
 			:alt="title"
