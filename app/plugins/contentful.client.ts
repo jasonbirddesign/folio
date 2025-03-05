@@ -8,6 +8,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 	const work = await client.getEntries({
 		content_type: 'work'
 	})
+	work.items.sort((a, b) => a.fields.order - b.fields.order)
 	nuxtApp.provide('work', work)
 	const openedImage = ref<OpenedImage | null>(null)
 	nuxtApp.provide('openImage', (payload: string) => {

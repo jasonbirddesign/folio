@@ -9,6 +9,8 @@ declare global {
 	}
 	interface Work {
 		title: string
+		slug: string
+		company: string
 		introduction: string
 		myRole: string
 		team: string[]
@@ -31,5 +33,10 @@ declare module '#app' {
 	interface NuxtApp {
 		$openedImage: OpenedImage | null
 		$openImage: Function
+		$work: {
+			items: {
+				fields: Work
+			}[]
+		}
 	}
 }
