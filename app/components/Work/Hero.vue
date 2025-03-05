@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { marked } from 'marked'
 const props = defineProps<{
 	work: Work
 }>()
@@ -10,13 +11,20 @@ const openImage = () => {
 	}))
 	$openImage(payload)
 }
+const intro = computed(() => {
+	return props.work.introduction ? marked.parse(props.work.introduction) : null
+})
 </script>
 
 <template>
 	<div>
 		<div class="max-w-[848px] mx-auto mb-10">
 			<h1 class="text-step-4 font-bold leading-tight mb-8">{{ work.title }}</h1>
-			<p class="mb-16 leading-(--p-leading)">{{ work.introduction }}</p>
+			<div
+				v-if="intro"
+				v-html="intro"
+				class="prose mb-16"
+			></div>
 			<div class="border-t border-grey/50 pt-8 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4">
 				<div class="flex flex-col gap-2 text-step--1">
 					<h3 class="text-dark-grey font-bold">MY ROLE</h3>
