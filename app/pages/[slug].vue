@@ -3,13 +3,13 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 const route = useRoute()
 const { $work, $openedImage } = useNuxtApp()
-const work = computed<Work>(() => {
+const work = computed<Work | undefined>(() => {
 	return $work?.items?.find(item => {
 		return item.fields.slug === route.params.slug
 	})?.fields
 })
 const html = computed(() => {
-	return documentToHtmlString(work.value.body, {
+	return documentToHtmlString(work.value?.body, {
 		renderNode: {
 			[BLOCKS.EMBEDDED_ASSET]: (node) => {
 				const tags = node.data.target.metadata?.tags

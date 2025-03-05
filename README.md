@@ -1,6 +1,6 @@
 # Jason Bird
 
-Designing digital experiences that drive business value.
+Portfolio
 
 ## Setup
 
