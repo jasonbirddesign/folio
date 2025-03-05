@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { marked } from 'marked'
 const props = defineProps<{
 	work: Work
 }>()
-const { $openImage } = useNuxtApp()
+const { $openImage, $marked } = useNuxtApp()
 const openImage = () => {
 	const payload = encodeURIComponent(JSON.stringify({
 		src: props.work.heroImage.fields.file.url,
@@ -12,7 +11,7 @@ const openImage = () => {
 	$openImage(payload)
 }
 const intro = computed(() => {
-	return props.work.introduction ? marked.parse(props.work.introduction) : null
+	return props.work.introduction ? $marked.parse(props.work.introduction) : null
 })
 </script>
 

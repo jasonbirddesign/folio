@@ -1,66 +1,22 @@
 <script setup lang="ts">
-const links = [
-	{
-		header: 'Speaking',
-		items: [
-			{
-				text: 'Designing with biases',
-				url: 'https://www.eventbrite.co.uk/e/designing-with-biases-tickets-79498669661'
-			}
-		]
-	},
-	{
-		header: 'Writing',
-		items: [
-			{
-				text: 'Designing with tokens for a flexible multi-brand design system',
-				url: 'https://clearleft.com/thinking/designing-with-tokens-for-a-flexible-multi-brand-design-system'
-			},
-			{
-				text: 'Designing your mobile navigation',
-				url: 'https://medium.com/clear-left-thinking/designing-your-mobile-navigation-b115bb174301'
-			}
-		]
-	},
-	{
-		header: 'Mentorship',
-		items: [
-			{
-				text: 'ADP List',
-				url: 'https://adplist.org/mentors/jason-bird'
-			}
-		]
-	}
-]
+const { $siteConfig, $marked } = useNuxtApp()
+const aboutText = computed(() => {
+	return $siteConfig?.aboutText ? $marked.parse($siteConfig?.aboutText) : null
+})
 </script>
 
 <template>
 	<div class="container">
 		<div class="pt-30 pb-23">
 			<h1 class="text-step-4 font-bold mb-16">About</h1>
-			<div class="mb-16 flex flex-col gap-6 max-w-[628px] leading-(--p-leading)">
-				<p>10+ years designing Products and services based in Brighton, UK</p>
-				<p>Leading design bringing multi discipline teams together to turn ideas in to business and consumer value. I'm a strategic thinker, problem solver, systems tinkerer.</p>
-				<p>
-					Currently
-					<NuxtLink
-						to="https://www.opentable.com/"
-						target="_blank"
-					>
-						@OpenTable
-					</NuxtLink>
-					previously
-					<NuxtLink
-						to="https://clearleft.com/"
-						target="_blank"
-					>
-						@Clearleft
-					</NuxtLink>
-				</p>
-			</div>
+			<div
+				v-if="aboutText"
+				v-html="aboutText"
+				class="mb-16 flex flex-col gap-6 max-w-[628px] leading-(--p-leading)"
+			></div>
 			<div class="flex flex-col gap-11">
 				<div
-					v-for="(link, i) in links"
+					v-for="(link, i) in $siteConfig?.aboutLinks"
 					:key="i"
 					class="flex flex-col gap-4"
 				>
@@ -82,7 +38,6 @@ const links = [
 					</div>
 				</div>
 			</div>
-
 		</div>
 		<div class="flex flex-col gap-6 mb-22.5">
 			<div class="grid grid-cols-2 gap-6">

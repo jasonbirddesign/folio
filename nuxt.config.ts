@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 			meta: [
 				{
 					name: 'description',
-					content: 'Designing digital experiences that drive business value'
+					content: 'Portfolio'
 				}
 			],
 			link: [
