@@ -9,6 +9,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 	const siteConfig = await client.getEntries({
 		content_type: 'config'
 	})
+	if (!siteConfig?.items?.[0]?.fields) return location.replace('https://www.linkedin.com/in/jbird55/')
 	nuxtApp.provide('siteConfig', siteConfig?.items?.[0]?.fields)
 	const work = await client.getEntries({
 		content_type: 'work'

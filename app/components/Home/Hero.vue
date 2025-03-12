@@ -27,7 +27,7 @@ const homeSubtitle = computed(() => {
 				class="floating-cursor-2 right-0 bottom-15 md:bottom-30"
 			/>
 		</div>
-		<p class="text-step--1 text-center mb-2 md:mb-4">Who i’ve worked with</p>
+		<p class="text-step--1 text-center mb-2 md:mb-4">{{ $siteConfig.homeLogosCaption }}</p>
 		<div class="hidden lg:flex flex-wrap gap-8 py-4 md:py-8 justify-between items-center">
 			<HomeLogos/>
 		</div>
