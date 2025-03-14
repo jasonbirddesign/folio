@@ -18,7 +18,7 @@ const footerText = computed(() => {
 		></div>
 		<div class="flex items-center gap-8">
 			<NuxtLink
-				:to="$siteConfig.linkedin"
+				:to="$siteConfig.linkedIn"
 				target="_blank"
 			>
 				<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
