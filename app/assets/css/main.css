@@ -13,8 +13,8 @@
 	--text-step-4: clamp(2.3328rem, 2.1092rem + 1.118vw, 3.1154rem);
 	--text-step-5: clamp(2.7994rem, 2.4509rem + 1.7421vw, 4.0188rem);
 	--color-light-grey: #F9F9F9;
-	--color-grey: #5D6375;
-	--color-dark-grey: #333333;
+	--color-grey: #141413;
+	--color-dark-grey: #141413;
 	--color-blue: #2E90FA;
 	--color-dark-blue: #1570EF;
 	--color-green: #12B76A;
@@ -26,6 +26,7 @@
 body {
 	@apply text-step-0 text-grey font-display;
 	background-color: #faf9f5;
+	transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, a {
@@ -42,6 +43,26 @@ button {
 
 .container {
 	@apply max-w-[1100px] mx-auto px-4 flex flex-col
+}
+
+.dark {
+	--color-dark-grey: #f0ede6;
+	--color-grey: #b0ada6;
+	--color-light-grey: #2a2a28;
+}
+
+.dark body {
+	background-color: #1a1a18;
+}
+
+.dark .border-grey\/50,
+.dark .border-t {
+	border-color: rgba(232, 230, 223, 0.15);
+}
+
+.dark .home-logos img {
+	filter: invert(1) brightness(2);
+	transition: filter 0.4s ease;
 }
 
 .prose {

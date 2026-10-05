@@ -31,11 +31,11 @@ const homeSubtitle = computed(() => {
 			/>
 		</div>
 		<p class="text-step--1 text-center mb-2 md:mb-4">{{ $siteConfig.homeLogosCaption }}</p>
-		<div class="hidden lg:flex flex-wrap gap-8 py-4 md:py-8 justify-between items-center">
+		<div class="home-logos hidden lg:flex flex-wrap gap-8 py-4 md:py-8 justify-between items-center">
 			<HomeLogos/>
 		</div>
 		<Vue3Marquee>
-			<div class="lg:hidden flex gap-8 py-4 md:py-8 items-center mr-8">
+			<div class="home-logos lg:hidden flex gap-8 py-4 md:py-8 items-center mr-8">
 				<HomeLogos/>
 			</div>
 		</Vue3Marquee>
