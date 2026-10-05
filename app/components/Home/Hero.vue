@@ -27,7 +27,7 @@ const homeSubtitle = computed(() => {
 			<FloatingCursor
 				text="Your team"
 				colour="green"
-				class="floating-cursor-2 right-0 bottom-15 md:bottom-30"
+				class="floating-cursor-2 right-0 bottom-0 md:bottom-10"
 			/>
 		</div>
 		<p class="text-step--1 text-center mb-2 md:mb-4">{{ $siteConfig.homeLogosCaption }}</p>
