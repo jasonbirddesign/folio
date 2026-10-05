@@ -6,7 +6,8 @@ const aboutText = computed(() => {
 </script>
 
 <template>
-	<div class="container">
+	<div class="container about-wrapper">
+		<div class="hero-gradient" aria-hidden="true"></div>
 		<div class="pt-30 pb-23">
 			<h1 class="text-step-4 font-bold mb-16">About</h1>
 			<div
@@ -58,3 +59,25 @@ const aboutText = computed(() => {
 		<Contact/>
 	</div>
 </template>
+
+<style scoped>
+.about-wrapper {
+	position: relative;
+}
+.hero-gradient {
+	position: absolute;
+	top: -350px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70vw;
+	max-width: 900px;
+	height: 500px;
+	pointer-events: none;
+	z-index: -1;
+	background:
+		radial-gradient(ellipse 40% 55% at 30% 50%, rgba(255, 110, 140, 0.6), transparent 70%),
+		radial-gradient(ellipse 35% 50% at 50% 40%, rgba(210, 140, 230, 0.55), transparent 70%),
+		radial-gradient(ellipse 40% 55% at 70% 55%, rgba(130, 165, 255, 0.55), transparent 70%);
+	filter: blur(70px);
+}
+</style>
