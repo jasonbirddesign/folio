@@ -24,7 +24,8 @@
 }
 
 body {
-	@apply text-step-0 text-grey font-display
+	@apply text-step-0 text-grey font-display;
+	background-color: #faf9f5;
 }
 
 h1, a {
