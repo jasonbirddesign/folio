@@ -6,7 +6,8 @@ const homeSubtitle = computed(() => {
 </script>
 
 <template>
-	<div class="hero-gradient" aria-hidden="true"></div>
+	<div class="hero-wrapper">
+		<div class="hero-gradient" aria-hidden="true"></div>
 	<Fade class="pt-33 md:pt-56 pb-16">
 		<div class="relative">
 			<FloatingCursor
@@ -39,23 +40,27 @@ const homeSubtitle = computed(() => {
 			</div>
 		</Vue3Marquee>
 	</Fade>
+	</div>
 </template>
 
 <style scoped>
+.hero-wrapper {
+	position: relative;
+}
 .hero-gradient {
-	position: fixed;
-	top: -300px;
+	position: absolute;
+	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 110vw;
-	max-width: 1800px;
-	height: 900px;
+	width: 70vw;
+	max-width: 900px;
+	height: 500px;
 	pointer-events: none;
-	z-index: 0;
+	z-index: -1;
 	background:
-		radial-gradient(ellipse 35% 50% at 25% 50%, rgba(255, 110, 140, 0.6), transparent 70%),
-		radial-gradient(ellipse 30% 45% at 50% 45%, rgba(210, 140, 230, 0.55), transparent 70%),
-		radial-gradient(ellipse 35% 50% at 75% 55%, rgba(130, 165, 255, 0.55), transparent 70%);
-	filter: blur(80px);
+		radial-gradient(ellipse 40% 55% at 30% 50%, rgba(255, 110, 140, 0.6), transparent 70%),
+		radial-gradient(ellipse 35% 50% at 50% 40%, rgba(210, 140, 230, 0.55), transparent 70%),
+		radial-gradient(ellipse 40% 55% at 70% 55%, rgba(130, 165, 255, 0.55), transparent 70%);
+	filter: blur(70px);
 }
 </style>
