@@ -21,7 +21,7 @@ const homeSubtitle = computed(() => {
 			class="mb-4"
 		></div>
 		<h1 class="text-step-5 font-bold leading-tight mb-8">{{ $siteConfig.homeTitle }}</h1>
-		<p class="text-step-1 leading-relaxed mb-31 md:mb-42">Modern design isn't just about handing off static screens&mdash;it&rsquo;s about owning the outcome. I combine UX strategy, visual craft, and front-end execution to build digital products people love.</p>
+		<p class="text-step-1 font-normal leading-relaxed mb-31 md:mb-42">Modern design isn't just about handing off static screens&mdash;it&rsquo;s about owning the outcome. I combine UX strategy, visual craft, and front-end execution to build digital products people love.</p>
 		<div class="relative">
 			<FloatingCursor
 				text="Your team"
@@ -43,19 +43,19 @@ const homeSubtitle = computed(() => {
 
 <style scoped>
 .hero-gradient {
-	position: absolute;
-	top: -200px;
+	position: fixed;
+	top: -300px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 120vw;
-	max-width: 1600px;
-	height: 800px;
+	width: 110vw;
+	max-width: 1800px;
+	height: 900px;
 	pointer-events: none;
-	z-index: -1;
+	z-index: 0;
 	background:
-		radial-gradient(ellipse 40% 55% at 30% 45%, rgba(255, 120, 150, 0.55), transparent 70%),
-		radial-gradient(ellipse 35% 50% at 55% 40%, rgba(220, 150, 230, 0.5), transparent 70%),
-		radial-gradient(ellipse 40% 55% at 75% 50%, rgba(140, 170, 255, 0.5), transparent 70%);
-	filter: blur(60px);
+		radial-gradient(ellipse 35% 50% at 25% 50%, rgba(255, 110, 140, 0.6), transparent 70%),
+		radial-gradient(ellipse 30% 45% at 50% 45%, rgba(210, 140, 230, 0.55), transparent 70%),
+		radial-gradient(ellipse 35% 50% at 75% 55%, rgba(130, 165, 255, 0.55), transparent 70%);
+	filter: blur(80px);
 }
 </style>
