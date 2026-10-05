@@ -6,7 +6,9 @@ const homeSubtitle = computed(() => {
 </script>
 
 <template>
-	<Fade class="pt-33 md:pt-56 pb-16">
+	<div class="hero-wrapper">
+		<div class="hero-gradient" aria-hidden="true"></div>
+	<Fade class="pt-32 pb-16">
 		<div class="relative">
 			<FloatingCursor
 				text="Hi, i'm Jason"
@@ -19,12 +21,13 @@ const homeSubtitle = computed(() => {
 			v-html="homeSubtitle"
 			class="mb-4"
 		></div>
-		<h1 class="text-step-5 font-bold leading-tight mb-56">{{ $siteConfig.homeTitle }}</h1>
+		<h1 class="text-step-5 font-bold leading-tight mb-8">{{ $siteConfig.homeTitle }}</h1>
+		<p class="text-step-1 font-light leading-relaxed mb-32 text-neutral-500">Modern design isn't just about handing off static screens, it&rsquo;s about owning the outcome.</p>
 		<div class="relative">
 			<FloatingCursor
 				text="Your team"
 				colour="green"
-				class="floating-cursor-2 right-0 bottom-15 md:bottom-30"
+				class="floating-cursor-2 right-0 bottom-0 md:bottom-10"
 			/>
 		</div>
 		<p class="text-step--1 text-center mb-2 md:mb-4">{{ $siteConfig.homeLogosCaption }}</p>
@@ -37,4 +40,27 @@ const homeSubtitle = computed(() => {
 			</div>
 		</Vue3Marquee>
 	</Fade>
+	</div>
 </template>
+
+<style scoped>
+.hero-wrapper {
+	position: relative;
+}
+.hero-gradient {
+	position: absolute;
+	top: -350px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70vw;
+	max-width: 900px;
+	height: 500px;
+	pointer-events: none;
+	z-index: -1;
+	background:
+		radial-gradient(ellipse 40% 55% at 30% 50%, rgba(255, 110, 140, 0.6), transparent 70%),
+		radial-gradient(ellipse 35% 50% at 50% 40%, rgba(210, 140, 230, 0.55), transparent 70%),
+		radial-gradient(ellipse 40% 55% at 70% 55%, rgba(130, 165, 255, 0.55), transparent 70%);
+	filter: blur(70px);
+}
+</style>
