@@ -49,7 +49,7 @@ const homeSubtitle = computed(() => {
 }
 .hero-gradient {
 	position: absolute;
-	top: -100px;
+	top: -350px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 70vw;
