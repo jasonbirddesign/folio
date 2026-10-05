@@ -22,7 +22,7 @@ const homeSubtitle = computed(() => {
 			class="mb-4"
 		></div>
 		<h1 class="text-step-5 font-bold leading-tight mb-8">{{ $siteConfig.homeTitle }}</h1>
-		<p class="text-step-1 font-light leading-relaxed mb-31 md:mb-42">Modern design isn't just about handing off static screens&mdash;it&rsquo;s about owning the outcome. I combine UX strategy, visual craft, and front-end execution to build digital products people love.</p>
+		<p class="text-step-1 font-light leading-relaxed mb-31 md:mb-42">Modern design isn't just about handing off static screens, it&rsquo;s about owning the outcome.</p>
 		<div class="relative">
 			<FloatingCursor
 				text="Your team"
