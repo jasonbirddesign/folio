@@ -8,7 +8,7 @@ const homeSubtitle = computed(() => {
 <template>
 	<div class="hero-wrapper">
 		<div class="hero-gradient" aria-hidden="true"></div>
-	<Fade class="pt-33 md:pt-56 pb-16">
+	<Fade class="pt-16 md:pt-24 pb-16">
 		<div class="relative">
 			<FloatingCursor
 				text="Hi, i'm Jason"
