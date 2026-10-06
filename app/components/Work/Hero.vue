@@ -3,7 +3,9 @@ const props = defineProps<{
 	work: Work
 }>()
 const { $openImage, $marked } = useNuxtApp()
+const isVideo = computed(() => props.work.heroImage?.fields.file.contentType?.startsWith('video/'))
 const openImage = () => {
+	if (isVideo.value) return
 	const payload = encodeURIComponent(JSON.stringify({
 		src: props.work.heroImage.fields.file.url,
 		alt: props.work.title
@@ -65,7 +67,19 @@ const intro = computed(() => {
 				</div>
 			</div>
 		</div>
-		<button @click="openImage">
+		<video
+			v-if="isVideo"
+			:src="work.heroImage.fields.file.url"
+			autoplay
+			muted
+			loop
+			playsinline
+			class="w-full"
+		/>
+		<button
+			v-else
+			@click="openImage"
+		>
 			<img
 				:src="work.heroImage.fields.file.url"
 				:alt="work.title"
