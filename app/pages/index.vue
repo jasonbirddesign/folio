@@ -15,6 +15,7 @@ const { $work } = useNuxtApp()
 				:company="work.fields.company"
 				:title="work.fields.title"
 				:image="work.fields.heroImage?.fields.file.url"
+				:content-type="work.fields.heroImage?.fields.file.contentType"
 				:path="`/${work.fields.slug}`"
 			/>
 		</div>
