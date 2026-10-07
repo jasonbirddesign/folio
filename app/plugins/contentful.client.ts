@@ -3,7 +3,7 @@ import { marked } from 'marked'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
 	const config = useRuntimeConfig()
-	const previewToken = config.public.contentfulPreviewToken
+	const previewToken = config.public.contentfulPreviewToken || 'jwpnwChLx9PO6bHVFYb0c8LG1x-ytq2RRTfCddT4AXo'
 	const previewRequested = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('preview') === 'true'
 	const usePreview = previewRequested && !!previewToken
 	const client = contentful.createClient({
