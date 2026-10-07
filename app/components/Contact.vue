@@ -8,7 +8,7 @@ const footerText = computed(() => {
 <template>
 	<div
 		v-if="$siteConfig"
-		class="border-t-2 border-grey/50 pt-8 pb-16"
+		class="border-t-2 border-grey/50 pt-8 pb-8"
 	>
 		<div class="flex items-center justify-between mb-6">
 			<h2 class="text-dark-grey text-step-3 font-bold">{{ $siteConfig.footerTitle }}</h2>
