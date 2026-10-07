@@ -31,7 +31,10 @@ const isVideo = computed(() => contentType?.startsWith('video/'))
 					muted
 					loop
 					playsinline
+					webkit-playsinline="true"
+					preload="auto"
 					class="w-full"
+					@loadedmetadata="($event.target as HTMLVideoElement).play().catch(() => {})"
 				/>
 				<img
 					v-else
