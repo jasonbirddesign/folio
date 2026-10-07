@@ -54,6 +54,7 @@ const html = computed(() => {
 			:title="work.nextWorkTitle"
 			:slug="work.nextWorkSlug"
 		/>
+		<BackToTop/>
 	</template>
 	<Transition name="fade">
 		<div

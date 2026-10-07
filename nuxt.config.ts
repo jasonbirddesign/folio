@@ -22,6 +22,11 @@ export default defineNuxtConfig({
 		}
 	},
 	devtools: { enabled: false },
+	runtimeConfig: {
+		public: {
+			contentfulPreviewToken: process.env.NUXT_PUBLIC_CONTENTFUL_PREVIEW_TOKEN || ''
+		}
+	},
 	css: ['~/assets/css/main.css'],
 	modules: [
 		'@vueuse/nuxt'
