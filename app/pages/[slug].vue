@@ -18,9 +18,24 @@ const html = computed(() => {
 				let classNames = "w-full"
 				if (narrow) classNames += " max-w-[848px] mx-auto"
 				if (lightGreyBackground) classNames += " bg-light-grey rounded-3xl p-4"
+				const src = node.data.target.fields.file.url
+				const title = node.data.target.fields.title
+				const contentType = node.data.target.fields.file.contentType || ''
+				if (contentType.startsWith('video/')) {
+					return `<video
+						src="${src}"
+						autoplay
+						muted
+						loop
+						playsinline
+						webkit-playsinline="true"
+						preload="auto"
+						class="${classNames}"
+					></video>`
+				}
 				const payload = encodeURIComponent(JSON.stringify({
-					src: node.data.target.fields.file.url,
-					alt: node.data.target.fields.title,
+					src,
+					alt: title,
 					lightGreyBackground
 				}))
 				return `<button
@@ -28,8 +43,8 @@ const html = computed(() => {
 					onclick="useNuxtApp().$openImage('${payload}')"
 				>
 					<img
-						src="${node.data.target.fields.file.url}"
-						alt="${node.data.target.fields.title}"
+						src="${src}"
+						alt="${title}"
 						class="w-full"
 					/>
 				</button>`
