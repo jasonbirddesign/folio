@@ -48,10 +48,11 @@ const isVideo = computed(() => contentType?.startsWith('video/'))
 </template>
 
 <style scoped>
-img {
+img, video {
 	transition: transform 0.3s ease;
 }
-.work-card:hover img {
+.work-card:hover img,
+.work-card:hover video {
 	transform: scale(1.15);
 }
 </style>
